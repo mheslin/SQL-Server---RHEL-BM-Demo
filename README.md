@@ -28,10 +28,12 @@ Installing the Demo
    3. Ensure execute permissions are set for all demo scripts - e.g. chmod +x
   
 Running the Demo
+
    $ cd ~demo-user
    $ ./demo.sh
    
 Removing the Demo
+
    $ cd ~demo-user
    $ ./cleanup.sh
 
