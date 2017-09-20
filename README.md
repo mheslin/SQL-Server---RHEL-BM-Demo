@@ -9,7 +9,7 @@ Demo consists of three stages:
 The total time required to complete these steps is approximately 5 minutes.
 
 Prerequisites
-  - Bare metal or VM host runing Red Hat Enterprsier Linux 7.4 with latest updates.
+  - Bare metal or VM host running Red Hat Enterprise Linux 7.4 with latest updates.
     The developer edition of RHEL can be used for non-production purposes and was used 
     to create this demo. For more information, or to download images:
     
