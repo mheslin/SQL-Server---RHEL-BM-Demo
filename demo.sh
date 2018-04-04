@@ -43,7 +43,7 @@ printf "**************************\n"
 printf "\n1. Download the Microsoft SQL Server Red Hat repository configuration file\n\n"
 printf "$ sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server.repo"
 read
-sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server.repo
+sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
 
 read
 clear
