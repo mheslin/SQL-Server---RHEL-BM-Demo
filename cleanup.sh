@@ -7,8 +7,8 @@ read
 
 
 printf "\n1. Drop Database Sample Table\n\n"
-printf "$ sqlcmd -U SA -P RedHat123!  -i Query_DB.sql\n"
-sqlcmd -U SA -P RedHat123!  -i Drop_DB.sql
+printf "$ /opt/mssql-tools/bin/sqlcmd -U SA -P RedHat123! -i Query_DB.sql\n"
+sqlcmd -U SA -P RedHat123! -i Drop_DB.sql
 
 printf "\n2. Remove SQL Server 2017\n\n"
 printf "$ sudo yum erase -y mssql-server\n"
@@ -32,9 +32,9 @@ printf "$ sudo firewall-cmd --reload\n"
 sudo firewall-cmd --reload 
 
 printf "\n6. Restore $PATH in ~/.bashrc, ~/.bash_profile\n\n"
-cp -p ~mheslin/.bashrc.orig ~mheslin/.bashrc
-cp -p ~mheslin/.bash_profile.orig ~mheslin/.bash_profile
-source ~mheslin/.bashrc
+cp -p ${HOME}/.bashrc.orig ~mheslin/.bashrc
+cp -p ${HOME}/.bash_profile.orig ~mheslin/.bash_profile
+source ${HOME}/.bashrc
 
 printf "\n"
 printf "***************************************\n"
