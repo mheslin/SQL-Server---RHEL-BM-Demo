@@ -27,13 +27,21 @@ printf "\tTo save time the host has been previously updated ('yum update').\n"
 printf "\n\n\t Press any key to continue.\n"
 read 
 
+TOTMEM=$(grep MemTotal /proc/meminfo | awk '{print $2}')
+if [ $TOTMEM -lt 2200000 ] ; then
+   clear
+   echo "This system does not meet the minimum memory requirement."
+   echo "SQL Server 2017 requires at least 2 GB of RAM. Aborting setup."
+   exit 1
+fi
+
 clear
 printf "\n\tThis demonstration consists of three parts:\n\n"
 printf "\t\tInstallation of SQL Server 2017\n"
 printf "\t\tInstallation of SQL Server Command Line Tools\n"
 printf "\t\tSample Database Load and Query\n\n"
 printf "\tThe total time required to complete these steps is approximately 5 minutes.\n\n"
-printf "\tIf you are running this script as a user and does not have sudo root\n"
+printf "\tIMPORTANT: If you are running this script as a user and does not have sudo root\n"
 printf "\tprivileges, ensure to set sudo privileges prior to moving on.\n"
 printf "\tLet's get started!!!\n"
 printf "\n\n\t Press any key to continue or ^C to interrupt.\n"
